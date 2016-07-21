@@ -35,31 +35,31 @@
 		.state("menu.home.map", {
 			url:"/map",
 			templateUrl:"views/map.html"
-			
+
 		})
-        
+
         .state("menu.home.settings", {
 			url:"/settings",
 			templateUrl:"views/settings.html"
-			
+
 		})
         
         .state("menu.home.check", {
-			url:"/chek",
+			url:"/check",
 			templateUrl:"views/check.html"
-			
+
 		})
-        
+
         .state("menu.home.evaluation", {
 			url:"/evaluation",
 			templateUrl:"views/evaluation.html"
-			
+
 		})
-        
+
         .state("menu.home.search", {
 			url:"/search",
 			templateUrl:"views/search.html"
-			
+
 		});
 
 

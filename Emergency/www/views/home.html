@@ -1,10 +1,50 @@
 <ion-view view-title="{{home}}">
-		
-		<div class="button-circle back-assertive" ng-click="abreModal()">
-			<button class="button button-icon button-clear icon ion-edit button-light"></button>
-		</div>
+  <ion-content>
+<!DOCTYPE html>
+<html>
 
-	<ion-content>
-		<h1>{{home}}</h1>
-	</ion-content>
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/home_main.less.css" class="main-less">
+    <link rel="stylesheet" type="text/css" href="css/home_main.less.css" class="main-less">
+    <link rel="stylesheet" type="text/css" href="css/home_main.less.css" class="main-less">
+    <link rel="stylesheet" type="text/css" href="css/home_main.less.css" class="main-less">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <script src="intelxdk.js"></script>
+    <script src="cordova.js"></script>
+    <script src="xhr.js"></script>
+    <script src="xdk/init-dev.js"></script>
+  </head>
+
+  <body>
+    <div class="upage vertical-col left" id="mainpage">
+      <div class="uib-grid widget uib_w_1 grid-text grid-height d-margins" data-uib="layout/grid" data-ver="1">
+        <div class="uib-grid-row">
+          <div class="uib-grid-cell widget-container">
+            <button class="btn widget uib_w_2 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="icon ion-android-search" class="button-icon-top" data-position="top"></i>Pesquisar</button>
+          </div>
+          <div class="uib-grid-cell widget-container">
+            <button class="btn widget uib_w_3 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="icon ion-ios-star" class="button-icon-top" data-position="top"></i>Favoritos</button>
+          </div>
+        </div>
+        <div class="uib-grid-row">
+          <div class="uib-grid-cell widget-container">
+            <button class="btn widget uib_w_4 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="icon ion-ios-gear" class="button-icon-top" data-position="top"></i>Configuração</button>
+          </div>
+          <div class="uib-grid-cell widget-container">
+            <button class="btn widget uib_w_5 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="icon ion-thumbsup" class="button-icon-top" data-position="top"></i>Avaliação</button>
+        <div class="uib-grid-row">
+          <div class="uib-grid-cell widget-container">
+            <button class="btn widget uib_w_4 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="icon icon-person" class="button-icon-top" data-position="top"></i>Perfil</button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
+  </ion-content>
 </ion-view>
