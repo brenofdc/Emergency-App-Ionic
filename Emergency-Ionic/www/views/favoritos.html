@@ -1,0 +1,7 @@
+<ion-view view-title="{{favoritos}}" id="page2" class=" ">
+    <ion-content padding="true" class="has-header">
+        <ion-list ng-repeat="hospital in hospitais" id="favoritos-list5" class=" ">
+            <ion-item class="calm" ng-click="perfilUsuario(hospital.id)" id="favoritos-list-item15">{{hospital.nome}}</ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

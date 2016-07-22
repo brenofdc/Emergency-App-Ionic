@@ -1,0 +1,32 @@
+ <ion-view  style="background-color: #0182ba">
+   <ion-nav-bar class="bar-opacity">
+         <ion-nav-back-button class="button-light"></ion-nav-back-button>
+  </ion-nav-bar>
+    <ion-content  ng-repeat="usuario in usuarioPerfil">
+
+
+         <div class="row row-center responsive-sm">
+
+            <div class="col col-center" style="text-align:center; height: 50%;padding: 30% 0;" >
+                <h1 class="light">{{usuario.nome}}</h1>
+                <h4 class="light">Nota: {{usuario.nota}}</h4>
+            </div>
+        </div>
+
+
+        <div class="row row-center" style="text-align:center; padding: 0; margin:0;">
+            <div class="col col-50" style="background-color: #e800e8; height: 180px; padding-top: 15px !important">
+                <h4 class="light">{{usuario.endereco}}</h4>
+                <p class="light">Endereco</p>
+            </div>
+
+            <div class="col col-50" style="background-color: #009dff; height: 180px; padding-top: 15px !important">
+                <h1 class="light">{{usuario.num_pacientes}}</h1>
+                <p class="light">Pacientes na fila</p>
+            </div>
+
+        </div>
+
+
+    </ion-content>
+</ion-view>

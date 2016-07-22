@@ -1,0 +1,43 @@
+<ion-modal-view>
+
+          <ion-header-bar  class="bar-positive">
+
+                   <h1 class="title">Modal</h1>
+
+
+            <button class="button button-clear button-icon ion-close" ng-click="fechaModal()"></button>
+
+
+          </ion-header-bar>
+
+            <ion-content>
+
+                    <h2>Cadastro de Hospital</h2>
+		<form name="formCadastro">
+		<div class="list">
+		  <label class="item item-input item-floating-label" >
+		    <span class="input-label">Nome</span>
+		    <input type="text" placeholder="Nome" name="nome" ng-model="cadastro.nome" ng-required="true">
+		    <span class="assertive" ng-show="formCadastro.nome.$invalid && formCadastro.nome.$dirty">Pereencha o campo nome corretamente!</span>
+		  </label>
+
+		  <label class="item item-input item-floating-label">
+		    <span class="input-label">Endereço</span>
+		    <input type="endereco" placeholder="Endereco"  name="endereco" ng-model="cadastro.endereco" ng-required="true">
+		    <span class="assertive" ng-show="formCadastro.endereco.$invalid && formCadastro.endereco.$dirty">Pereencha o campo endereco corretamente!</span>
+
+		  </label>
+
+		  <!--<label class="item item-input item-floating-label">
+		    <span class="input-label">Senha</span>
+		    <input type="password" placeholder="Senha"  name="senha" ng-model="cadastro.senha" ng-required="true">
+		    <span class="assertive" ng-show="formCadastro.senha.$invalid && formCadastro.senha.$dirty">Pereencha o campo senha corretamente!</span>
+
+		  </label>-->
+
+		</div>
+		</form>
+		<button class="button button-full button-positive" ng-disabled="formCadastro.$invalid" ng-click="cadastroUsuario(cadastro)">Enviar</button>
+            </ion-content>
+
+  </ion-modal-view>
