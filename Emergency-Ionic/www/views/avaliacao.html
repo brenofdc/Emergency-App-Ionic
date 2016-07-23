@@ -1,5 +1,30 @@
-<ion-view view-title="{{avaliacao}}" id="page2" class=" ">
-    <ion-content padding="true" class="has-header">
-    <h1>Avalicao</h1>
-    </ion-content>
+<ion-view view-title="{{avaliacao}}" class=" ">
+  <ion-content padding="true" class="has-header">
+    <form id="pesquisar-form2" class="list ">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="search" placeholder="Pesquisar Hospitais" ng-model="searchQuery">
+      </label>
+    </form>
+    <div>
+    <div class="item item-text-wrap">
+      <ion-list>
+        <ion-item ng-click="avaliarPerfil(hospital.id)" ng-repeat="hospital in hospitais | filter: searchQuery">
+          <a class="item item-thumbnail-left" href="#">
+            <img src="img\hospital.png">
+            <h2>{{hospital.nome}}</h2>
+            <p>{{hospital.endereco}}</p>
+            <p>{{item.link}}</p>
+          </a>
+            <ion-checkbox
+              ng-model="item.favorito"
+              ng-checked="item.favorito">
+              <h2>{{item.favorito}} Favorito</h2>
+            </ion-checkbox>
+        </div>
+        </ion-item>
+        </ion-list>
+      </ion-list>
+    </div>
+  </ion-content>
 </ion-view>

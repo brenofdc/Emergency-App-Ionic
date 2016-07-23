@@ -131,9 +131,45 @@
 			$location.path("/menu/perfil");
 		};
 
-		// PÁGINA FAVORITOS
+		// AVALIAR HOSPITAL
+		$scope.avaliarPerfil = function(id) {
+			$scope.usuarioPerfil = $scope.hospitais.filter(function(element) {
+				return element.id == id;
+			});
+			console.log($scope.usuarioPerfil);
+			$location.path("/menu/avaliar-perfil");
+		};
+		/* PÁGINA FAVORITOS
 		$scope.carregarFavoritos = function() {
 			//console.log();
+
+			$location.path("menu/favoritos");
+		};*/
+
+		// PÁGINA FAVORITOS IMPLEMENTAÇÃO INCOMPLETA
+		$scope.carregarFavoritos = function() {
+			//console.log();
+			//BANCO DE DADOS ONLINE
+			var getData = function(){
+				var  params = {
+					counter:0,
+					token:"1f3d2gs3f2fg3as2fdg3re2t1we46er45"
+			};
+
+			Data.getData(params).success(function(data){
+					$scope.hospitais = data;
+
+				}).error(function(data){
+					console.log(data? data : "Não foi possivel acessar o servidor");
+				});
+			};
+
+			$scope.statusFavorito = function(item) {
+				console.log('Favoritado', $scope.change.favorito);
+			};
+
+			$scope.change = { favorito: true };
+
 			$location.path("menu/favoritos");
 		};
 
@@ -146,12 +182,50 @@
 		// PÁGINA AVALIAÇÃO
 		$scope.carregarAvalicao = function() {
 			//console.log();
+
+			//BANCO DE DADOS ONLINE
+			var getData = function(){
+				var  params = {
+					counter:0,
+					token:"1f3d2gs3f2fg3as2fdg3re2t1we46er45"
+			};
+
+			Data.getData(params).success(function(data){
+					$scope.hospitais = data;
+
+				}).error(function(data){
+					console.log(data? data : "Não foi possivel acessar o servidor");
+				});
+			};
+
 			$location.path("menu/avaliacao");
 		};
 
 		// PÁGINA PESQUISAR
 		$scope.carregarPesquisar = function() {
-			//console.log();
+			//console.log();aqui começa
+
+			//BANCO DE DADOS ONLINE
+			var getData = function(){
+				var  params = {
+					counter:0,
+					token:"1f3d2gs3f2fg3as2fdg3re2t1we46er45"
+			};
+
+			Data.getData(params).success(function(data){
+					$scope.hospitais = data;
+
+				}).error(function(data){
+					console.log(data? data : "Não foi possivel acessar o servidor");
+				});
+			};
+
+			$scope.statusFavorito = function(item) {
+				console.log('Favoritado', $scope.change.favorito);
+			};
+
+			$scope.change = { favorito: false };
+
 			$location.path("menu/pesquisar");
 		};
 

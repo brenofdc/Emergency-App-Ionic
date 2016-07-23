@@ -32,6 +32,15 @@
 			}
 		})
 
+		.state("menu.avaliar-perfil", {
+			url:"/avaliar-perfil",
+			views:{
+				'menuContent':{
+					templateUrl:"views/avaliar-perfil.html",
+				}
+			}
+		})
+
 		.state("menu.favoritos", {
 			url:"/favoritos",
 			views:{

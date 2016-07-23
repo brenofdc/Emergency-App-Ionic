@@ -1,0 +1,33 @@
+ <ion-view  style="background-color: #0182ba">
+   <ion-nav-bar class="bar-opacity">
+         <ion-nav-back-button class="button-light"></ion-nav-back-button>
+  </ion-nav-bar>
+    <ion-content  ng-repeat="usuario in usuarioPerfil">
+
+
+         <div class="row row-center responsive-sm">
+
+            <div class="col col-center" style="text-align:center; height: 50%;padding: 30% 0;" >
+                <h1 class="light">{{usuario.nome}}</h1>
+                <h4 class="light">{{usuario.endereco}}</h4>
+            </div>
+        </div>
+        <div class="row row-center" style="padding: 20px; margin:20px;">
+        <!--IMPLEMENTAR FUNCAO LANCAR NOTA -->
+        <button class="button button-full button-calm" ng-click="lancarNota()">Enviar</button>
+        <button class="button button-full button-calm" ng-click="lancarNota()">Cancelar</button>
+      </div>
+        <div class="row row-center" style="text-align:center; padding: 0; margin:0;">
+            <div class="col col-50" style="background-color: #e800e8; height: 100px; padding-top: 15px !important">
+                    <h1 class="light">Nota: {{usuario.nota}}</h1>
+            </div>
+
+            <div class="col col-50" style="background-color: #009dff; height: 100px; padding-top: 15px !important">
+                  Avalie
+            </div>
+
+        </div>
+
+
+    </ion-content>
+</ion-view>
